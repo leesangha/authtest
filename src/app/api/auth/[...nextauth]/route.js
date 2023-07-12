@@ -8,10 +8,15 @@ export const authOptions = {
       clientSecret: process.env.APPLE_SECRET,
     }),
   ],
-  callbacks: {
-    async jwt({ token }) {
-      token.userRole = "admin";
-      return token;
+  cookies: {
+    pkceCodeVerifier: {
+      name: "next-auth.pkce.code_verifier",
+      options: {
+        httpOnly: true,
+        sameSite: "none",
+        path: "/",
+        secure: true,
+      },
     },
   },
 };
