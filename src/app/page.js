@@ -9,10 +9,8 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {!session && (
         <>
-          Not signed in <br />
           <button
             onClick={() => {
-              // console.log(context);
               signIn("apple");
             }}
           >
