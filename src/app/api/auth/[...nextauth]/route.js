@@ -32,6 +32,7 @@ export const authOptions = {
         token.provider = account.provider;
         token.accessToken = account.access_token;
         token.id = user.id;
+        token.id_token = account.id_token;
       }
       return token;
     },
