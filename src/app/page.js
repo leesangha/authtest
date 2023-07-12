@@ -11,7 +11,7 @@ export default function Home() {
         <>
           <button
             onClick={() => {
-              signIn("apple");
+              signIn();
             }}
           >
             Sign in

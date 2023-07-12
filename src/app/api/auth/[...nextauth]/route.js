@@ -8,6 +8,12 @@ export const authOptions = {
       clientSecret: process.env.APPLE_SECRET,
     }),
   ],
+  callbacks: {
+    async jwt({ token }) {
+      token.userRole = "admin";
+      return token;
+    },
+  },
 };
 
 const handler = NextAuth(authOptions);
