@@ -21,7 +21,6 @@ export default function Home() {
     }
   };
 
-  console.log(asdf);
   console.log(session);
 
   return (
