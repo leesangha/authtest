@@ -17,7 +17,7 @@ export default function Home() {
           },
         }).then((res) => console.log(res));
     } catch {
-      console.log(e);
+      console.log("error");
     }
   }, [session]);
 
