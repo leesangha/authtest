@@ -6,7 +6,7 @@ import { useEffect, useMemo } from "react";
 export default function Home() {
   const { data: session } = useSession();
 
-  const asdf = useMemo(() => {
+  const onClick = () => {
     try {
       if (session.token.provider === "apple")
         fetch("https://3.35.97.160:5000/accounts/v1/rest-auth/apple", {
@@ -19,14 +19,14 @@ export default function Home() {
     } catch {
       console.log("error");
     }
-  }, [session]);
+  };
 
   console.log(asdf);
   console.log(session);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>infludeo</div>
+      <div onClick={onClick}>Login</div>
       {!session && (
         <>
           <button
