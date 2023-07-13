@@ -6,7 +6,7 @@ import { useEffect, useMemo } from "react";
 export default function Home() {
   const { data: session } = useSession();
 
-  useEffect(() => {
+  const asdf = useMemo(() => {
     try {
       if (session.token.provider === "apple")
         fetch("https://3.35.97.160:5000/accounts/v1/rest-auth/apple", {
@@ -21,6 +21,7 @@ export default function Home() {
     }
   }, [session]);
 
+  console.log(asdf);
   console.log(session);
 
   return (
