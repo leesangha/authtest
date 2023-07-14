@@ -1,11 +1,16 @@
 import NextAuth from "next-auth";
 import AppleProvider from "next-auth/providers/apple";
+import TwitterProvider from "next-auth/providers/twitter";
 
 export const authOptions = {
   providers: [
     AppleProvider({
       clientId: process.env.APPLE_ID,
       clientSecret: process.env.APPLE_SECRET,
+    }),
+    TwitterProvider({
+      clientId: process.env.TWITTER_CLIENT_ID,
+      clientSecret: process.env.TWITTER_CLIENT_SECRET,
     }),
   ],
 
